@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {# ── TITLE ───────────────────────────────────────────────────────────────── #}
+    <title>{% block title %}Дом културе Стари Колашин — Зубин Поток{% endblock %}</title>
+
+    {# ── SEO META ────────────────────────────────────────────────────────────── #}
+    <meta name="description" content="{% block meta_description %}Дом културе „Стари Колашин" у Зубином Потоку — центар културног живота Ибарског Колашина. Биоскоп, вести, часопис, ликовна колонија акварела Газиводе и КУД Мокра Гора.{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}Дом културе Стари Колашин, Зубин Поток, Ибарски Колашин, КУД Мокра Гора, биоскоп Зубин Поток, ликовна колонија Газиводе, часопис Стари Колашин, Косово и Метохија{% endblock %}">
+    <meta name="author" content="Дом културе Стари Колашин">
+    <meta name="robots" content="{% block meta_robots %}index, follow{% endblock %}">
+    <link rel="canonical" href="{% block canonical %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% endblock %}">
+
+    {# ── OPEN GRAPH ──────────────────────────────────────────────────────────── #}
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:site_name" content="Дом културе Стари Колашин">
+    <meta property="og:locale" content="sr_RS">
+    <meta property="og:title" content="{% block og_title %}Дом културе Стари Колашин — Зубин Поток{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Дом културе „Стари Колашин" у Зубином Потоку — центар културног живота Ибарског Колашина. Биоскоп, вести, часопис, ликовна колонија и КУД Мокра Гора.{% endblock %}">
+    <meta property="og:url" content="{% block og_url %}{{ request.scheme }}://{{ request.get_host }}{{ request.path }}{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://res.cloudinary.com/dt5z2gs3c/image/upload/v1780849064/domski_kjt0er.jpg{% endblock %}">
+    <meta property="og:image:width" content="{% block og_image_width %}1200{% endblock %}">
+    <meta property="og:image:height" content="{% block og_image_height %}630{% endblock %}">
+    <meta property="og:image:alt" content="{% block og_image_alt %}Дом културе Стари Колашин{% endblock %}">
+
+    {# ── TWITTER / X CARD ────────────────────────────────────────────────────── #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}Дом културе Стари Колашин — Зубин Поток{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}Дом културе „Стари Колашин" у Зубином Потоку — центар културног живота Ибарског Колашина.{% endblock %}">
+    <meta name="twitter:image" content="{% block twitter_image %}https://res.cloudinary.com/dt5z2gs3c/image/upload/v1780849064/domski_kjt0er.jpg{% endblock %}">
+
+    {# ── FAVICON ─────────────────────────────────────────────────────────────── #}
+    <link rel="icon" type="image/jpeg" href="/media/images/logo.jpg">
+    <link rel="apple-touch-icon" href="/media/images/logo.jpg">
+    <link rel="manifest" href="{% static 'core/site.webmanifest' %}">
+    <meta name="theme-color" content="#1a1a1a">
+
+    {# ── JSON-LD STRUCTURED DATA ──────────────────────────────────────────────── #}
+    {% block structured_data %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CulturalOrganization",
+      "name": "Дом културе Стари Колашин",
+      "alternateName": "Dom kulture Stari Kolašin",
+      "url": "{{ request.scheme }}://{{ request.get_host }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ request.scheme }}://{{ request.get_host }}/media/images/logo.jpg"
+      },
+      "image": "https://res.cloudinary.com/dt5z2gs3c/image/upload/v1780849064/domski_kjt0er.jpg",
+      "description": "Дом културе „Стари Колашин" у Зубином Потоку — центар културног живота Ибарског Колашина. Биоскоп, вести, часопис, ликовна колонија акварела Газиводе и КУД Мокра Гора.",
+      "foundingDate": "1995",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Колашинских кнежева 29",
+        "addressLocality": "Зубин Поток",
+        "postalCode": "38228",
+        "addressCountry": "RS"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+381641236400",
+        "email": "domkulturezp@gmail.com",
+        "contactType": "customer service",
+        "availableLanguage": "Serbian"
+      },
+      "sameAs": [
+        "https://www.youtube.com/@starikolasin",
+        "https://www.instagram.com/kulturnicentarstarikolasin/",
+        "https://www.facebook.com/p/%D0%94%D0%BE%D0%BC-%D0%BA%D1%83%D0%BB%D1%82%D1%83%D1%80%D0%B5-%D0%A1%D1%82%D0%B0%D1%80%D0%B8-%D0%9A%D0%BE%D0%BB%D0%B0%D1%88%D0%B8%D0%BD-%D0%97%D1%83%D0%B1%D0%B8%D0%BD-%D0%9F%D0%BE%D1%82%D0%BE%D0%BA-100053360948017/"
+      ]
+    }
+    </script>
+    {% endblock %}
+
+    {# ── EXTRA HEAD (per-page additions) ─────────────────────────────────────── #}
+    {% block extra_head %}{% endblock %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Alumni+Sans+SC:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <h1 class="logo">
+    <a href="/" class="logo-link">
+
+        <div class="logo-mark">
+            <img src="/media/images/logo.jpg" alt="Лого Дом културе Стари Колашин">
+            <div class="logo-mark-bar"></div>
+        </div>
+
+        <div class="logo-divider"></div>
+
+        <div class="logo-text">
+            <span class="logo-top">Дом културе</span>
+            <span class="logo-orn">◆</span>
+            <span class="logo-bottom">Стари Колашин</span>
+        </div>
+    </a>
+</h1>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Отвори мени">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li class="close-menu">
+                    <button id="closeMenu" aria-label="Затвори мени">✕</button>
+                </li>
+                <li><a href="{% url 'core:about' %}">О нама</a></li>
+                <li><a href="/#vesti">Вести</a></li>
+                <li><a href="{% url 'core:rec' %}">Часопис</a></li>
+                <li><a href="{% url 'prodavnica:market' %}">Продавница</a></li>
+                <li><a href="{% url 'core:bioskop' %}">Биоскоп</a></li>
+                <li><a href="/#kontakt">Контакт</a></li>
+            </ul>
+
+        </nav>
+        {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert {{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+
+    <footer>
+
+        <div class="cnt-footer" id="kontakt">
+
+            <div class="left">
+
+                <h2>КОНТАКТ</h2>
+
+                <p>📧 E-mail: domkulturezp@gmail.com</p>
+                <p>📞 Телефон: +381 64 123 64 00</p>
+                <a href="https://maps.app.goo.gl/inWKCGfaW5cemuZ46" target="_blank">📍 Колашинских кнежева 29, 38228 Зубин Поток</a>
+
+
+            </div>
+
+
+            <div class="right">
+
+                <h2>ПРАТИТЕ НАС</h2>
+
+                <div class="socials">
+
+                    <a href="https://www.youtube.com/@starikolasin" target="_blank" aria-label="YouTube канал">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/kulturnicentarstarikolasin/" target="_blank" aria-label="Instagram профил">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/p/%D0%94%D0%BE%D0%BC-%D0%BA%D1%83%D0%BB%D1%82%D1%83%D1%80%D0%B5-%D0%A1%D1%82%D0%B0%D1%80%D0%B8-%D0%9A%D0%BE%D0%BB%D0%B0%D1%88%D0%B8%D0%BD-%D0%97%D1%83%D0%B1%D0%B8%D0%BD-%D0%9F%D0%BE%D1%82%D0%BE%D0%BA-100053360948017/" target="_blank" aria-label="Facebook страница">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    {% block script %}
+    {% endblock %}
+
+
+
+   <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const toggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("navLinks");
+    const close = document.getElementById("closeMenu");
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    document.querySelectorAll('.alert').forEach(el => {
+        setTimeout(() => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(-10px)";
+            el.style.transition = "0.5s ease";
+            setTimeout(() => el.remove(), 500);
+        }, 3000);
+    });
+
+    // OPEN
+    toggle.addEventListener("click", () => {
+        nav.classList.add("active");
+    });
+
+    // CLOSE (X button)
+    close.addEventListener("click", (e) => {
+        e.stopPropagation();
+        nav.classList.remove("active");
+    });
+
+    // CLOSE ON LINK CLICK
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+        });
+    });
+
+    // CLOSE ON ESCAPE
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape") nav.classList.remove("active");
+    });
+
+    // SCROLL TO TOP
+    if (scrollBtn) {
+        window.addEventListener("scroll", () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight / 1.5) {
+                scrollBtn.classList.add("show");
+            } else {
+                scrollBtn.classList.remove("show");
+            }
+        });
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>

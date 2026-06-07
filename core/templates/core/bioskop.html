@@ -1,0 +1,363 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Биоскоп — Дом културе Стари Колашин{% endblock %}
+{% block meta_description %}Биоскопски програм Дома културе „Стари Колашин" у Зубином Потоку. Редовне пројекције, резервација карата онлајн. {% if featured %}Тренутно у програму: {{ featured.title }}.{% endif %}{% endblock %}
+{% block og_title %}Биоскоп — Дом културе Стари Колашин{% endblock %}
+{% block og_description %}Редовне биоскопске пројекције у Зубином Потоку. {% if featured %}Филм недеље: {{ featured.title }}.{% endif %} Резервишите карту онлајн.{% endblock %}
+{% block og_image %}{% if featured %}{{ featured.image.url }}{% else %}https://res.cloudinary.com/dt5z2gs3c/image/upload/v1780849064/domski_kjt0er.jpg{% endif %}{% endblock %}
+{% block og_image_alt %}{% if featured %}{{ featured.title }} — биоскоп Стари Колашин{% else %}Биоскоп Дом културе Стари Колашин{% endif %}{% endblock %}
+{% block twitter_title %}Биоскоп — Дом културе Стари Колашин{% endblock %}
+{% block twitter_description %}Редовне биоскопске пројекције у Зубином Потоку. Резервишите карту онлајн.{% endblock %}
+{% block twitter_image %}{% if featured %}{{ featured.image.url }}{% else %}https://res.cloudinary.com/dt5z2gs3c/image/upload/v1780849064/domski_kjt0er.jpg{% endif %}{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MovieTheater",
+  "name": "Биоскоп — Дом културе Стари Колашин",
+  "url": "{{ request.scheme }}://{{ request.get_host }}{% url 'core:bioskop' %}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Колашинских кнежева 29",
+    "addressLocality": "Зубин Поток",
+    "postalCode": "38228",
+    "addressCountry": "RS"
+  },
+  "parentOrganization": {
+    "@type": "CulturalOrganization",
+    "name": "Дом културе Стари Колашин"
+  }{% if featured %},
+  "event": {
+    "@type": "ScreeningEvent",
+    "name": "{{ featured.title }}",
+    "startDate": "{{ featured.screening_date|date:'c' }}",
+    "location": {
+      "@type": "Place",
+      "name": "Биоскоп Дом културе Стари Колашин",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Зубин Поток",
+        "addressCountry": "RS"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "{{ featured.ticket_price }}",
+      "priceCurrency": "RSD"
+    }
+  }{% endif %}
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="bioskop-hero">
+    <img src="/media/images/dom.JPG" alt="Биоскоп" class="bioskop-hero-img">
+    <div class="bioskop-hero-overlay"></div>
+    <div class="bioskop-hero-content">
+        <span class="bioskop-hero-label">Дом културе · Стари Колашин</span>
+        <h1 class="bioskop-hero-title">Биоскопски<br>програм</h1>
+        <p class="bioskop-hero-sub">Редовне пројекције · Зубин Поток</p>
+    </div>
+    <div class="bioskop-hero-scroll">↓</div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FEATURED FILM
+═══════════════════════════════════════════ -->
+{% if featured %}
+<section class="bioskop-featured">
+    <div class="bioskop-featured-inner">
+
+        <div class="bioskop-featured-poster">
+            <img src="{{ featured.image.url }}" alt="{{ featured.title }}">
+            {% if featured.tag %}
+            <span class="bioskop-tag bioskop-tag--featured">{{ featured.get_tag_display }}</span>
+            {% endif %}
+        </div>
+
+        <div class="bioskop-featured-info">
+            <p class="bioskop-featured-eyebrow">Филм недеље</p>
+            <h2 class="bioskop-featured-title">{{ featured.title }}</h2>
+            <div class="bioskop-featured-meta">
+                <span class="bioskop-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    {{ featured.screening_date|date:"d. F Y." }}
+                </span>
+                <span class="bioskop-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    {{ featured.screening_date|time:"H:i" }}h
+                </span>
+                <span class="bioskop-meta-item bioskop-meta-price">
+                    {{ featured.ticket_price }} РСД
+                </span>
+            </div>
+            <p class="bioskop-featured-desc">{{ featured.description }}</p>
+            <button class="bioskop-btn-primary rezv-open"
+                data-title="{{ featured.title }}"
+                data-date="{{ featured.screening_date|date:'d. F Y.' }} у {{ featured.screening_date|time:'H:i' }}h"
+                data-price="{{ featured.ticket_price }}"
+                data-id="{{ featured.pk }}">
+                Резервиши карту
+            </button>
+        </div>
+
+    </div>
+</section>
+{% endif %}
+
+
+<!-- ═══════════════════════════════════════════
+     PROGRAM GRID
+═══════════════════════════════════════════ -->
+<section class="bioskop-program" id="program">
+
+    <div class="bioskop-program-header">
+        <span class="bioskop-section-label">Репертоар</span>
+        <h2 class="bioskop-section-title">У програму</h2>
+        <div class="bioskop-section-rule"></div>
+    </div>
+
+    {% if films %}
+    <div class="bioskop-slider-wrap">
+        <div class="bioskop-slider">
+
+            {% for film in films %}
+            <div class="bioskop-card">
+
+                <div class="bioskop-card-poster">
+                    <img src="{{ film.image.url }}" alt="{{ film.title }}">
+                    {% if film.tag %}
+                    <span class="bioskop-tag">{{ film.get_tag_display }}</span>
+                    {% endif %}
+                    <div class="bioskop-card-overlay">
+                        <p class="bioskop-card-desc">{{ film.description|truncatewords:20 }}</p>
+                    </div>
+                </div>
+
+                <div class="bioskop-card-body">
+                    <h3 class="bioskop-card-title">{{ film.title }}</h3>
+                    <div class="bioskop-card-meta">
+                        <span>{{ film.screening_date|date:"d. M Y." }}</span>
+                        <span>{{ film.screening_date|time:"H:i" }}h</span>
+                    </div>
+                    <div class="bioskop-card-footer">
+                        <span class="bioskop-card-price">{{ film.ticket_price }} РСД</span>
+                        <button class="bioskop-btn-card rezv-open"
+                            data-title="{{ film.title }}"
+                            data-date="{{ film.screening_date|date:'d. F Y.' }} у {{ film.screening_date|time:'H:i' }}h"
+                            data-price="{{ film.ticket_price }}"
+                            data-id="{{ film.pk }}">
+                            Резервиши
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    {% else %}
+    <p class="bioskop-empty">Тренутно нема заказаних пројекција. Пратите нас за нови програм.</p>
+    {% endif %}
+
+</section>
+
+<button id="scrollTopBtn" class="scroll-top">↑</button>
+
+<!-- ═══════════════════════════════════════════
+     MODAL РЕЗЕРВАЦИЈА
+═══════════════════════════════════════════ -->
+<div class="rezv-backdrop" id="rezvBackdrop" aria-hidden="true">
+    <div class="rezv-modal" role="dialog" aria-modal="true">
+
+        <button class="rezv-close" id="rezvClose" aria-label="Затвори">✕</button>
+
+        <div class="rezv-modal-header">
+            <span class="rezv-modal-label">Резервација карте</span>
+            <h2 class="rezv-modal-title" id="rezvFilmTitle">—</h2>
+            <div class="rezv-modal-meta">
+                <span id="rezvFilmDate"></span>
+                <span class="rezv-modal-dot">·</span>
+                <span id="rezvFilmPrice"></span> РСД
+            </div>
+        </div>
+
+        <form class="rezv-form" id="rezvForm" novalidate>
+            {% csrf_token %}
+            <input type="hidden" id="rezvFilmId" name="film_id">
+
+            <div class="rezv-field">
+                <label for="rezvIme">Ваше ime (опционо)</label>
+                <input type="text" id="rezvIme" name="ime" placeholder="нпр. Марко Петровић" autocomplete="name">
+            </div>
+
+            <div class="rezv-field">
+                <label for="rezvEmail">Е-поштa <span class="rezv-req">*</span></label>
+                <input type="email" id="rezvEmail" name="email" placeholder="vasa@email.com" autocomplete="email" required>
+                <p class="rezv-field-error" id="rezvEmailErr"></p>
+            </div>
+
+            <button type="submit" class="rezv-submit" id="rezvSubmit">
+                <span class="rezv-submit-text">Пошаљи резервацију</span>
+                <span class="rezv-submit-spinner" aria-hidden="true"></span>
+            </button>
+        </form>
+
+        <div class="rezv-success" id="rezvSuccess" hidden>
+            <div class="rezv-success-icon">✓</div>
+            <h3>Резервација послата!</h3>
+            <p>Контактираћемо вас на унету е-пошту.</p>
+        </div>
+
+        <div class="rezv-error-msg" id="rezvErrorMsg" hidden></div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block script %}
+<script>
+// ── DRAG TO SCROLL ──────────────────────────
+const slider = document.querySelector('.bioskop-slider');
+if (slider) {
+    let isDown = false, startX, scrollLeft;
+    slider.addEventListener('mousedown', e => {
+        isDown = true; slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => { isDown = false; slider.classList.remove('active'); });
+    slider.addEventListener('mouseup',    () => { isDown = false; slider.classList.remove('active'); });
+    slider.addEventListener('mousemove',  e => {
+        if (!isDown) return;
+        e.preventDefault();
+        slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 1.5;
+    });
+}
+
+// ── MODAL ───────────────────────────────────
+const backdrop  = document.getElementById('rezvBackdrop');
+const closeBtn  = document.getElementById('rezvClose');
+const form      = document.getElementById('rezvForm');
+const success   = document.getElementById('rezvSuccess');
+const errorMsg  = document.getElementById('rezvErrorMsg');
+const emailErr  = document.getElementById('rezvEmailErr');
+const submitBtn = document.getElementById('rezvSubmit');
+
+function openModal(btn) {
+    document.getElementById('rezvFilmTitle').textContent = btn.dataset.title;
+    document.getElementById('rezvFilmDate').textContent  = btn.dataset.date;
+    document.getElementById('rezvFilmPrice').textContent = btn.dataset.price;
+    document.getElementById('rezvFilmId').value          = btn.dataset.id;
+    form.reset();
+    form.hidden      = false;
+    success.hidden   = true;
+    errorMsg.hidden  = true;
+    emailErr.textContent = '';
+    backdrop.classList.add('rezv-active');
+    backdrop.setAttribute('aria-hidden', 'false');
+    document.getElementById('rezvEmail').focus();
+}
+
+function closeModal() {
+    backdrop.classList.remove('rezv-active');
+    backdrop.setAttribute('aria-hidden', 'true');
+}
+
+// open on every Резервиши button
+document.querySelectorAll('.rezv-open').forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn));
+});
+
+closeBtn.addEventListener('click', closeModal);
+backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── SUBMIT ──────────────────────────────────
+form.addEventListener('submit', async e => {
+    e.preventDefault();
+    emailErr.textContent = '';
+    errorMsg.hidden = true;
+
+    const email = document.getElementById('rezvEmail').value.trim();
+    if (!email || !email.includes('@')) {
+        emailErr.textContent = 'Унесите исправну е-пошту.';
+        document.getElementById('rezvEmail').focus();
+        return;
+    }
+
+    // loading state
+    submitBtn.disabled = true;
+    submitBtn.classList.add('rezv-loading');
+
+    const csrfToken = form.querySelector('[name=csrfmiddlewaretoken]').value;
+
+    const payload = {
+        film_id:    document.getElementById('rezvFilmId').value,
+        film_title: document.getElementById('rezvFilmTitle').textContent,
+        film_date:  document.getElementById('rezvFilmDate').textContent,
+        film_price: document.getElementById('rezvFilmPrice').textContent,
+        ime:        document.getElementById('rezvIme').value.trim(),
+        email:      email,
+    };
+
+    try {
+        const res  = await fetch("{% url 'core:bioskop_rezervacija' %}", {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrfToken },
+            body:    JSON.stringify(payload),
+        });
+        const data = await res.json();
+
+        if (data.ok) {
+            form.hidden    = true;
+            success.hidden = false;
+            showToast('✓ Резервација успешно послата!', 'success');
+        } else {
+            errorMsg.textContent = data.error || 'Дошло је до грешке.';
+            errorMsg.hidden = false;
+        }
+    } catch {
+        errorMsg.textContent = 'Грешка у вези. Проверите интернет и покушајте поново.';
+        errorMsg.hidden = false;
+        showToast('Грешка при слању. Покушајте поново.', 'error');
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('rezv-loading');
+    }
+});
+
+// ── TOAST ───────────────────────────────────
+function showToast(message, type = 'success') {
+    const existing = document.querySelector('.rezv-toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.className = `rezv-toast rezv-toast--${type}`;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    // trigger animation
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => toast.classList.add('rezv-toast--show'));
+    });
+
+    setTimeout(() => {
+        toast.classList.remove('rezv-toast--show');
+        setTimeout(() => toast.remove(), 400);
+    }, 3500);
+}
+</script>
+{% endblock %}

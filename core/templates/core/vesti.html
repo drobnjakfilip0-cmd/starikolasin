@@ -1,0 +1,58 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}{{ vest.naslov }} — Дом културе Стари Колашин{% endblock %}
+{% block meta_description %}{{ vest.opis|truncatechars:155 }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_title %}{{ vest.naslov }}{% endblock %}
+{% block og_description %}{{ vest.opis|truncatechars:200 }}{% endblock %}
+{% block og_image %}{{ vest.image.url }}{% endblock %}
+{% block og_image_alt %}{{ vest.naslov }}{% endblock %}
+{% block twitter_title %}{{ vest.naslov }}{% endblock %}
+{% block twitter_description %}{{ vest.opis|truncatechars:200 }}{% endblock %}
+{% block twitter_image %}{{ vest.image.url }}{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{{ vest.naslov }}",
+  "description": "{{ vest.opis|truncatechars:200 }}",
+  "image": "{{ vest.image.url }}",
+  "datePublished": "{{ vest.created_at|date:'c' }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Дом културе Стари Колашин",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ request.scheme }}://{{ request.get_host }}/media/images/logo.jpg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ request.scheme }}://{{ request.get_host }}{{ request.path }}"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<section class="cnt-vesti">
+
+    <img src="{{ vest.image.url }}" alt="{{ vest.naslov }}">
+
+    <div class="content">
+
+        <h2>{{ vest.naslov }}</h2>
+
+        <p>
+            {{ vest.opis }}
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

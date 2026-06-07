@@ -1,0 +1,1514 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "vest"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "video"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "prodavnica",
+    "model": "product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "rec"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hbdl55072q6jh1f4t9yi8ld9f2asufxo",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWnaYUrBpXvP0Mx0poIaSCisjHdXEha6_e-9_zKJtnVIW9UljWLOxpvT78aUHzrtQO403Wab52ldRra7Yg9a7XUWfV4O9-9goDp8a4dYIpQSfNf00lFP6AUyZqYeSggsgSBHZAEQaLVlcp0qiWs8Rlbz_gDsZziB:1wMPKo:wHY5_G52ikuHYno1aSApqRjS11gcjL2xb9afq1ZdaeM",
+    "expire_date": "2026-05-25T12:02:06.415Z"
+  }
+},
+{
+  "model": "core.vest",
+  "pk": 1,
+  "fields": {
+    "naslov": "Предавање мати Стефаниде",
+    "opis": "Мати Стефанида говорила је за РТС поводом Ускршњег поста...",
+    "image": "media/images/Screenshot_2026-05-12_at_21.55.29_kjiped",
+    "created_at": "2026-05-11T12:06:25.190Z"
+  }
+},
+{
+  "model": "core.vest",
+  "pk": 2,
+  "fields": {
+    "naslov": "Богослужење",
+    "opis": "Ускршњи распоред богослужења",
+    "image": "media/images/Screenshot_2026-05-12_at_21.51.25_xjo6ux",
+    "created_at": "2026-05-11T12:12:49.446Z"
+  }
+},
+{
+  "model": "core.vest",
+  "pk": 3,
+  "fields": {
+    "naslov": "Историја манастира Брњак",
+    "opis": "Лука Јовановић: Историја манастира Брњак",
+    "image": "media/images/Screenshot_2026-05-12_at_21.52.00_xonjcc",
+    "created_at": "2026-05-11T14:09:19.678Z"
+  }
+},
+{
+  "model": "core.vest",
+  "pk": 4,
+  "fields": {
+    "naslov": "Дани јоргована",
+    "opis": "У историји и народном предању чува се успомена на Јелену Анжујску, владарку и светитељку...",
+    "image": "media/images/Screenshot_2026-05-12_at_21.52.28_x5ixho",
+    "created_at": "2026-05-11T14:13:31.792Z"
+  }
+},
+{
+  "model": "core.vest",
+  "pk": 5,
+  "fields": {
+    "naslov": "Архимандрит Емилијан Симонопетритски",
+    "opis": "Годишњица упокојења Архимандрита Емилијана Симонопетритског",
+    "image": "media/images/Screenshot_2026-05-12_at_21.52.58_lrlapk",
+    "created_at": "2026-05-11T14:15:39.926Z"
+  }
+},
+{
+  "model": "core.vest",
+  "pk": 6,
+  "fields": {
+    "naslov": "Цртеж Јоване Влашковић",
+    "opis": "На фотографији је цртеж \"Манастир Брњак\" Јоване Влашковић, ученице 5. разреда из Зубиног Потока ❤️",
+    "image": "media/images/Screenshot_2026-05-12_at_21.53.15_slchsm",
+    "created_at": "2026-05-11T14:17:27.514Z"
+  }
+},
+{
+  "model": "core.video",
+  "pk": 2,
+  "fields": {
+    "naslov": "Симпосион о монаштву",
+    "opis": "Мати Стефанида о монаштву у Врању 2017. године",
+    "video": "https://www.youtube.com/watch?v=fntQtHC8fF0",
+    "created_at": "2026-05-11T14:59:47.576Z"
+  }
+},
+{
+  "model": "core.video",
+  "pk": 3,
+  "fields": {
+    "naslov": "ЗАГАЗИТИ У ОГАЊ",
+    "opis": "Мати Стефанида за Грађанско новинарство",
+    "video": "https://www.youtube.com/watch?v=Cd1Q2fS_ZwM",
+    "created_at": "2026-05-11T20:05:39.984Z"
+  }
+},
+{
+  "model": "core.video",
+  "pk": 4,
+  "fields": {
+    "naslov": "ЖЕНА",
+    "opis": "Мати Стефанида за ГРАЂАНСКО НОВИНАРСТВО",
+    "video": "https://www.youtube.com/watch?v=tf6SudRAuYg",
+    "created_at": "2026-05-11T20:06:38.351Z"
+  }
+},
+{
+  "model": "core.video",
+  "pk": 5,
+  "fields": {
+    "naslov": "Зашто на Косову нема страха?",
+    "opis": "Мати Стефанида о томе како пронаћи дом у Богу",
+    "video": "https://www.youtube.com/watch?v=gxmFbyHsS4k",
+    "created_at": "2026-05-11T20:08:26.591Z"
+  }
+},
+{
+  "model": "core.video",
+  "pk": 6,
+  "fields": {
+    "naslov": "Јелена Анжујска",
+    "opis": "ЈЕЛЕНА АНЖУЈСКА - жена, мајка, краљица",
+    "video": "https://www.youtube.com/watch?v=XahJHqwvXkc",
+    "created_at": "2026-05-11T20:14:25.782Z"
+  }
+},
+{
+  "model": "core.rec",
+  "pk": 2,
+  "fields": {
+    "naslov": "Тишина као почетак молитве",
+    "autor": "Игуманија мати Стефанида",
+    "slika": "media/rec/stefanida_cxfxbj",
+    "paragraf1": "Човек данас живи окружен буком, журбом и непрестаним расејањем.                      Тишина више није само одсуство звука, већ постаје простор у коме човек поново чује сопствено срце.",
+    "paragraf2": "Молитва не почиње речима, већ унутрашњим смирењем.                      Тек када ум престане да лута, човек може да осети присуство благодати.",
+    "citat": "„Не тражи Бога у буци света, већ у тишини срца.“",
+    "paragraf3": "Управо зато је манастир кроз векове био место где се човек враћа себи, другима и Богу.",
+    "created": "2026-05-12T18:02:16.190Z"
+  }
+},
+{
+  "model": "core.rec",
+  "pk": 3,
+  "fields": {
+    "naslov": "Молитве на језеру",
+    "autor": "Владика Николај Велимировић",
+    "slika": "media/rec/Ljubomir_Simonovic_-_Vladika_Nikolaj_vbdwmj",
+    "paragraf1": "Ко ме то гледа нетремице кроза све звезде на небу и све ствари на земљи?\r\nЗакрите очи своје, звезде и ствари; не гледајте наготу моју. Довољно ме стид пече кроз моје очи.\r\nШта имате да видите? Дрво живота, које се смањило у трн на друму, те убада и себе и друге. Шта друго – него пламен небесни зароњен у блато, те нити светли нити се гаси?\r\nОрачи, није главно ваше орање но Господ што посматра.\r\nПевачи, није главно ваша песма но Господ што слуша.\r\nСпавачи, није главно ваше спавање но Господ што бди.\r\nНије главно нешто воде у шкаљама око језера но језеро је главно.\r\nШта је све време људско до један талас што окваси врео песак на обали, па се покаја што остави језеро, јер пресахну?",
+    "paragraf2": "О звезде и ствари, не гледајте у мене но у Господа са очима. Он једини види. У Њега гледајте и видећете себе у домовини својој.\r\nНашто вам гледање у мене: у слику изгнанства свога? У огледало своје журне пролазности?\r\nГосподе, лепи убрусе мој, опточен златним серафимима, спусти се на мене као вео на удовицу, и покупи сузе моје, у којима ври жалост свих Твојих створења.\r\nГосподе, лепото моја, дођи ми у госте. Да се не бих стидео наготе своје. Да се многи жедни погледи, што падају на мене не би враћали дома жедни.",
+    "citat": "Ко ме постави у овај црвињак?",
+    "paragraf3": "Ко ме завали у прашину, да будем сусед змијама и ручак јастребима?\r\nКо ме сурва са горе високе, да будем сапутник крвницима и безбожницима?\r\nМој грех и Твоја правда, Господе. Од постања света протеже се грех мој, и бржи је него правда Твоја.",
+    "created": "2026-05-12T18:35:01.696Z"
+  }
+},
+{
+  "model": "core.rec",
+  "pk": 4,
+  "fields": {
+    "naslov": "Беседа на Светога Саву 1965. године у манастиру Ћелије",
+    "autor": "Јустин Ћелијски",
+    "slika": "media/rec/Sveti-Justin-Celijski-Ava-Justin-Popovic-750x425_zmsxrd",
+    "paragraf1": "У име Оца и Сина и Светога Духа. Амин. Данас је Свети Сава. Нека умукне Српска земља, нека говори Небо. Данас, на данашњи дан име српско је најславније на небу од свих 365 дана у години, јер данас на небу Серафими и Херуфими, све Небеске Силе клањају се најбољем, најсветијем и највећем Србину Светоме Сави, том Анђелу српском, том Херуфиму и Серафиму српском, том Анћелу рода Српскога. Да, несумњиво све Небеске Силе, све Небеске Силе, јер је он први узнео име српско међу Анђеле и Арханђеле, прославио га међу њима, пошто је живећи анђелским животом на земљи и сам постао Анђео.\r\nДанас се сви Свети Апостоли Христови клањају првом Апостолу српском, Светоме Сави, који се ревношћу у проповедању Еванђеља Христова изједначио са Светим Апостолима. Кроз њега су нас Србе упознали Свети Апостоли, ти најзнаменитији људи на земљи и на небу у роду људскоме. И међу њих је стао Равноапостолни Србин, Свети Сава.",
+    "paragraf2": "Данас се сви ови Свети Мученици клањају на небу Светом Првомученику српском, Светоме Сави. Зар Свети Сава није највећи Мученик рода Српскога? Та он ево седамсто година пати сваку Србинову патњу, мучи сваку Србинову муку. Да, он је Свемученик српски, од дана када је побегао у Свету Гору до данашњег дана када се име Христово гони по Српској земљи. Данас се и свети Испосници клањају на небу највећем Испоснику српском Светоме Сави, јер је оставио на земљи Еванђеље скраћено молитву и пост. Краљевић побегао из света, побегао из раскоши царскога двора, отишао у камениту Свету Гору да бос, од седамнаест година, бос прерађује себе постом и молитвом, да преображава себе из краљевића у Светитеља, из велможе у Подвижника и Христовог просјака.",
+    "citat": "Прво дело Светога Саве и најглавније, шта је? Он нам је дао Јединог Истинитог Бога, Господа Христа.",
+    "paragraf3": "Он, његове свете мошти у Милешеву, постале су главни престо наше историје српске. Ту је била Престоница српска под Турцима, Престоница вечног Патријарха Српскога Светога Саве, вечног владара српских душа у свима временима. Са свих страна народ је хрлио у Милешево да се поклони великом Светитељу, да му каже своје муке, да одрида своја страдања, да му исповеди све патње, све болести. И дивни Светитељ, милостив увек и на земљи и с неба, кроз свете мошти своје чинио је безбројна чудеса: исцељивао, лечио, тешио, а око његовог светог кивота војске монаха који су чували Српски народ, Српску душу.",
+    "created": "2026-05-12T19:25:17.258Z"
+  }
+},
+{
+  "model": "prodavnica.product",
+  "pk": 1,
+  "fields": {
+    "ime": "Икона",
+    "opis": "Свети Јован Крститељ",
+    "image": "media/images/ikona_vvldow",
+    "cena": 1000,
+    "created_at": "2026-05-11"
+  }
+},
+{
+  "model": "prodavnica.product",
+  "pk": 2,
+  "fields": {
+    "ime": "Књига",
+    "opis": "Лествица, Јована Лествичника",
+    "image": "media/images/Screenshot_2026-05-12_at_21.39.25_l3igym",
+    "cena": 1500,
+    "created_at": "2026-05-11"
+  }
+},
+{
+  "model": "prodavnica.product",
+  "pk": 3,
+  "fields": {
+    "ime": "Кандило",
+    "opis": "Висеће ливено кандило са ликом Богородице Висеће ливено кандило са ликом Богородице Висеће ливено кандило са ликом Богородице Висеће ливено кандило са ликом Богородице",
+    "image": "media/images/Screenshot_2026-05-12_at_21.39.50_wfa4di",
+    "cena": 3400,
+    "created_at": "2026-05-11"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add vest",
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "codename": "add_vest"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change vest",
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "codename": "change_vest"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete vest",
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "codename": "delete_vest"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view vest",
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "codename": "view_vest"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add video",
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "codename": "add_video"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change video",
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "codename": "change_video"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete video",
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "codename": "delete_video"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view video",
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "codename": "view_video"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add product",
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change product",
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete product",
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view product",
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add rec",
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "codename": "add_rec"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change rec",
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "codename": "change_rec"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete rec",
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "codename": "delete_rec"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view rec",
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "codename": "view_rec"
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$RkJjhLSq0sOR1eIksJddXs$ZCuV9vAT/+D1ld4bEiPj8qESpEPgwmiEnQQLYkDxgJY=",
+    "last_login": "2026-05-11T12:02:06.414Z",
+    "is_superuser": true,
+    "username": "stefanida",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-05-11T12:01:23.305Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-05-11T12:06:25.190Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "1",
+    "object_repr": "Vest object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-05-11T12:12:49.447Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "2",
+    "object_repr": "Vest object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-05-11T12:13:14.476Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "2",
+    "object_repr": "Vest object (2)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Naslov\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-05-11T14:09:19.679Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "3",
+    "object_repr": "Vest object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-05-11T14:13:31.796Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "4",
+    "object_repr": "Vest object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-05-11T14:15:39.927Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "5",
+    "object_repr": "Vest object (5)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-05-11T14:16:02.159Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "5",
+    "object_repr": "Vest object (5)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Naslov\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-05-11T14:17:27.515Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "6",
+    "object_repr": "Vest object (6)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-05-11T14:57:02.286Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "object_id": "1",
+    "object_repr": "Мати Стефанида ЗАГАЗИТИ У ОГАЊ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-05-11T14:59:47.579Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "object_id": "2",
+    "object_repr": "Симпосион о монаштву",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-05-11T15:10:32.242Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "object_id": "1",
+    "object_repr": "ЗАГАЗИТИ У ОГАЊ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Naslov\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-05-11T15:11:16.567Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "object_id": "1",
+    "object_repr": "ЗАГАЗИТИ У ОГАЊ",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-05-11T20:05:10.800Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "object_id": "1",
+    "object_repr": "ЗАГАЗИТИ У ОГАЊ",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-05-11T20:05:39.986Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "object_id": "3",
+    "object_repr": "ЗАГАЗИТИ У ОГАЊ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-05-11T20:06:38.352Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "object_id": "4",
+    "object_repr": "ЖЕНА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-05-11T20:06:58.439Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "object_id": "4",
+    "object_repr": "ЖЕНА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Video\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-05-11T20:08:26.593Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "object_id": "5",
+    "object_repr": "Зашто на Косову нема страха?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-05-11T20:14:25.783Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "video"
+    ],
+    "object_id": "6",
+    "object_repr": "Јелена Анжујска",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-05-11T22:16:23.674Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Product object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-05-11T22:20:22.138Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Product object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-05-11T22:20:35.110Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Product object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ime\", \"Opis\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-05-11T22:21:50.130Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Product object (2)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-05-11T22:21:53.963Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Product object (1)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-05-11T22:22:12.076Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Product object (2)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-05-11T22:50:17.985Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Product object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-05-12T00:13:57.232Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Product object (3)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Opis\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-05-12T17:42:37.252Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "object_id": "1",
+    "object_repr": "Тишина као почетак молитве",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-05-12T17:45:52.382Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "object_id": "1",
+    "object_repr": "Тишина као почетак молитве",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tekst\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-05-12T17:54:22.848Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "object_id": "1",
+    "object_repr": "Тишина као почетак молитве",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-05-12T17:58:59.620Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "object_id": "1",
+    "object_repr": "Тишина као почетак молитве",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-05-12T18:02:16.190Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "object_id": "2",
+    "object_repr": "Тишина као почетак молитве",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-05-12T18:35:01.697Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "object_id": "3",
+    "object_repr": "Молитве на језеру",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-05-12T19:25:17.263Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "object_id": "4",
+    "object_repr": "Беседа на Светога Саву 1965. године у манастиру Ћелије",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-05-12T19:25:58.393Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "object_id": "3",
+    "object_repr": "Молитве на језеру",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slika\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-05-12T19:38:18.243Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Product object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-05-12T19:50:26.584Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Product object (2)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-05-12T19:50:42.816Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "prodavnica",
+      "product"
+    ],
+    "object_id": "3",
+    "object_repr": "Product object (3)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-05-12T19:53:36.083Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "6",
+    "object_repr": "Цртеж Јоване Влашковић",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-05-12T19:53:50.363Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "5",
+    "object_repr": "Архимандрит Емилијан Симонопетритски",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-05-12T19:54:07.398Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "4",
+    "object_repr": "Дани јоргована",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-05-12T19:54:20.758Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "2",
+    "object_repr": "Богослужење",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-05-12T19:54:39.722Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "3",
+    "object_repr": "Историја манастира Брњак",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-05-12T19:55:51.937Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "vest"
+    ],
+    "object_id": "1",
+    "object_repr": "Предавање мати Стефаниде",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-05-12T19:56:26.396Z",
+    "user": [
+      "stefanida"
+    ],
+    "content_type": [
+      "core",
+      "rec"
+    ],
+    "object_id": "2",
+    "object_repr": "Тишина као почетак молитве",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slika\"]}}]"
+  }
+}
+]

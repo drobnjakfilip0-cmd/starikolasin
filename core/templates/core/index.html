@@ -1,0 +1,162 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Дом културе Стари Колашин — Зубин Поток{% endblock %}
+{% block meta_description %}Дом културе „Стари Колашин" у Зубином Потоку. Биоскоп, вести, часопис, ликовна колонија акварела Газиводе, КУД Мокра Гора. Основан 1995. године.{% endblock %}
+{% block og_title %}Дом културе Стари Колашин — Зубин Поток{% endblock %}
+{% block og_description %}Центар културног живота Ибарског Колашина. Биоскоп, вести, часопис, ликовна колонија и КУД Мокра Гора у Зубином Потоку.{% endblock %}
+{% block twitter_title %}Дом културе Стари Колашин — Зубин Поток{% endblock %}
+{% block twitter_description %}Центар културног живота Ибарског Колашина — биоскоп, вести, часопис и ликовна колонија.{% endblock %}
+
+{% block content %}
+
+            <div class="img">
+                <img src="https://res.cloudinary.com/dt5z2gs3c/image/upload/v1780870226/domski_o7q2c0.jpg">
+
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com/kulturnicentarstarikolasin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">INSTAGRAM</a>
+            </div>
+            <div class="text">
+                <h1>Дом културе СТАРИ КОЛАШИН започео је са радом 1995. године...</h1>
+                <p>Пре оснивања Дома културе, културни живот Зубиног Потока био је везан за библиотеку „Петар Петровић Његош", која је била смештена у Задружном дому. „Библиотекар Гано Божовић оставио је неизбрисив траг. Био је пасионирани културни радник и фотограф, а многи житељи Ибарског Колашина своје прве фотографије имају захваљујући управо њему", указује директорка Андријана Живановић. </p>
+
+            </div>
+           <section class="vesti" id="vesti">
+
+    <h1>ВЕСТИ</h1>
+
+    <div class="grid">
+   {% for v in vesti %}
+        <article class="card">
+
+            <a href="{% url 'core:vesti' v.id %}">
+                <img src="{{v.image.url}}">
+
+                <div class="content">
+                    <h2>{{v.naslov}}</h2>
+
+                    <p>
+                        {{v.opis | truncatewords:6}}
+                    </p>
+                </div>
+            </a>
+
+        </article>
+        {% endfor %}
+
+
+
+
+    </div>
+
+</section>
+<section class="direktor-section">
+
+    <div class="direktor-inner">
+
+        <!-- BIO -->
+        <div class="direktor-bio">
+            <span class="direktor-label">Директор установе</span>
+            <h2 class="direktor-name">Андријана<br>Живановић</h2>
+            <div class="direktor-rule"></div>
+            <p class="direktor-text">
+                Рођена 1971. године, дипломирала је на Филолошком факултету у Приштини, група за српски језик и књижевност. Од 1996–2013. радила у просвети и са успехом је извела генерације које су освајале бројна признања на републичким и регионалним такмичењима.
+            </p>
+            <p class="direktor-text">
+                Од 2013. године на челу је Установе за културу Дом културе „Стари Колашин" – Зубин Поток. Под њеним руководством Установа бележи сјајне резултате на пољу културе, препознате широм Косова и Метохије, Србије и шире.
+            </p>
+            <div class="direktor-signature">
+                <span>Живи и ради у Зубином Потоку.</span>
+            </div>
+        </div>
+
+        <!-- VIDEOS -->
+        <div class="direktor-videos">
+            {% for video in videos %}
+            <div class="direktor-vcard">
+                <div class="direktor-vcard-embed">
+                    <iframe src="{{video.youtube_url}}" title="{{video.naslov}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="direktor-vcard-info">
+                    <h3 class="direktor-vcard-title">{{video.naslov}}</h3>
+                    <p class="direktor-vcard-desc">{{video.opis}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about-block">
+    <h1 class="section-title">КУД МОКРА ГОРА</h1>
+
+    <div class="about-layout">
+        <div class="about-media">
+            <img src="media/images/kud.jpg" alt="">
+        </div>
+
+        <div class="about-text">
+            <p>
+                Велики допринос културном животу Ибарског Колашина даје Културно-уметничко друштво Мокра Гора које је основано давне 1939. године. Основна делатност Друштва је неговање и очување српске народне традиције у најизворнијем облику, очувањем народних игара, песама, обичаја... Своју уметност и љубав за оно што раде, млади људи, чланови КУД-а су исказали небројано пута на наступима у земљи и иностранству, где су са великим успехом представили фолклорно наслеђе свог краја. О томе најбоље сведоче награде и priznanja које је Друштво освајало. У склопу својих редовних активности КУД Мокра Гора је одржало годишњи концерт 14. марта 2017. године. Заједно са гостима, чланови Друштва су приказали богат репертоар саткан од игара и песама, које представљају не само Ибарски Колашин већ све области и крајеве Србије.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="about-block reverse">
+    <div class="about-layout">
+
+        <div class="about-media">
+            <img src="media/images/kud2.jpg" alt="KUD Mokra Gora">
+        </div>
+
+        <div class="about-text">
+            <h2>Руководство и делатност</h2>
+
+            <p>
+                КУД „Мокра Гора" је под руководством уметничког директора Милована Микија Велимировића, који је као кореограф познат на Косову и Метохији, у другим деловима Србије и Републици Српској, јер са КУД-ом често гостује на разним манифестацијама. Овај енергични кореограф је аутор бројних игара не само за КУД „Мокра Гора". Његове кореографије играју и друга културно-уметничка друштва као што су „Козара" из Приједора, „Врело" из Шипова, „Петар Карађорђевић" из Мркоњић Града, КУД „Уна" из Новог Града итд.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="gallery-section">
+
+    <div class="gallery-hero">
+        <h1>Ликовна колонија акварела Газиводе</h1>
+        <p>Избор радова насталих на колонији – акварели инспирисани пејзажима Газивода и околине.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        {% for artwork in artworks %}
+        <a href="{% url 'core:likovna_kolonija_detail' artwork.slug %}" class="gallery-card lkolonija-card">
+            <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+            <div class="lkolonija-card-info">
+                <p class="lkolonija-card-author">{{ artwork.author_name }}</p>
+                <h3 class="lkolonija-card-title">{{ artwork.title }}</h3>
+            </div>
+        </a>
+        {% endfor %}
+
+        <a href="{% url 'core:likovna_kolonija' %}" class="gallery-card cta-card">
+            <div class="cta-content">
+                <h2>Погледај целу колекцију</h2>
+                <span>→ Отвори галерију</span>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+            </div>
+         <button id="scrollTopBtn" class="scroll-top">
+    ↑
+</button>
+
+       {% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}{{ artwork.title }} — {{ artwork.author_name }} | Ликовна колонија Газиводе{% endblock %}
+{% block meta_description %}{{ artwork.description|truncatechars:155 }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_title %}{{ artwork.title }} — {{ artwork.author_name }}{% endblock %}
+{% block og_description %}{{ artwork.description|truncatechars:200 }}{% endblock %}
+{% block og_image %}{{ artwork.image.url }}{% endblock %}
+{% block og_image_alt %}{{ artwork.title }} — {{ artwork.author_name }}{% endblock %}
+{% block twitter_title %}{{ artwork.title }} — {{ artwork.author_name }}{% endblock %}
+{% block twitter_description %}{{ artwork.description|truncatechars:200 }}{% endblock %}
+{% block twitter_image %}{{ artwork.image.url }}{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VisualArtwork",
+  "name": "{{ artwork.title }}",
+  "description": "{{ artwork.description|truncatechars:200 }}",
+  "image": "{{ artwork.image.url }}",
+  "creator": {
+    "@type": "Person",
+    "name": "{{ artwork.author_name }}"
+  },
+  "dateCreated": "{{ artwork.created_at|date:'Y' }}",
+  "artMedium": "Акварел",
+  "locationCreated": {
+    "@type": "Place",
+    "name": "Газиводе, Ибарски Колашин"
+  },
+  "isPartOf": {
+    "@type": "ExhibitionEvent",
+    "name": "Ликовна колонија акварела Газиводе",
+    "organizer": {
+      "@type": "CulturalOrganization",
+      "name": "Дом културе Стари Колашин"
+    }
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<section class="lkolonija-hero">
+    <img src="/media/images/hero.jpg" alt="Likovna kolonija akvarela Gazivode">
+
+    <div class="lkolonija-hero-overlay"></div>
+
+    <div class="lkolonija-hero-content">
+        <span>Ликовна колонија акварела</span>
+        <h1> Газиводе</h1>
+    </div>
+</section>
+
+
+<section class="lkolonija-editorial">
+
+    <div class="lkolonija-editorial-grid">
+
+        <!-- LEFT: IMAGE -->
+        <div class="lkolonija-editorial-media">
+            <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+        </div>
+
+        <!-- RIGHT: TEXT -->
+        <div class="lkolonija-editorial-text">
+
+            <p class="lkolonija-author">
+                {{ artwork.author_name }}
+            </p>
+
+            <h2 class="lkolonija-title">
+                {{ artwork.title }}
+            </h2>
+
+            <div class="lkolonija-line"></div>
+
+            <p class="lkolonija-desc">
+                {{ artwork.description }}
+            </p>
+
+            <a href="{% url 'core:likovna_kolonija' %}" class="lkolonija-back">
+                ← Назад на колекцију
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<button id="scrollTopBtn" class="scroll-top">↑</button>
+
+{% endblock %}

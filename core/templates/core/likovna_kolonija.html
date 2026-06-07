@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Ликовна колонија акварела Газиводе — Дом културе Стари Колашин{% endblock %}
+{% block meta_description %}Галерија радова насталих на Ликовној колонији акварела Газиводе, у организацији Дома културе „Стари Колашин". Акварели инспирисани пејзажима Газивода и Ибарског Колашина.{% endblock %}
+{% block og_title %}Ликовна колонија акварела Газиводе{% endblock %}
+{% block og_description %}Избор акварела насталих на колонији — пејзажи Газивода и Ибарског Колашина. Организатор: Дом културе „Стари Колашин", Зубин Поток.{% endblock %}
+{% block twitter_title %}Ликовна колонија акварела Газиводе{% endblock %}
+{% block twitter_description %}Акварели настали на колонији у Газиводама — организација Дом културе Стари Колашин.{% endblock %}
+
+{% block content %}
+
+<section class="gallery-section">
+
+    <div class="gallery-hero">
+        <h1>Ликовна колонија акварела Газиводе</h1>
+        <p>Избор радова насталих на колонији – акварели инспирисани пејзажима Газивода и околине.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        {% for artwork in artworks %}
+        <a href="{% url 'core:likovna_kolonija_detail' artwork.slug %}" class="gallery-card lkolonija-card">
+            <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+            <div class="lkolonija-card-info">
+                <p class="lkolonija-card-author">{{ artwork.author_name }}</p>
+                <h3 class="lkolonija-card-title">{{ artwork.title }}</h3>
+            </div>
+        </a>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<button id="scrollTopBtn" class="scroll-top">↑</button>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="gallery-section">
+
+    <div class="gallery-hero">
+        <h1>Ликовна колонија акварела Газиводе</h1>
+        <p>Избор радова насталих на колонији – акварели инспирисани пејзажима Газивода и околине.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        {% for image in images %}
+        <a href="{{ image.image.url }}" class="gallery-card">
+            <img src="{{ image.image.url }}" alt="{{ image.title }}">
+        </a>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<button id="scrollTopBtn" class="scroll-top">↑</button>
+
+{% endblock %}

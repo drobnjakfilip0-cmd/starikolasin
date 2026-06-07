@@ -1,0 +1,141 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="prodav-hero">
+    <div class="prodav-hero-overlay"></div>
+    <div class="prodav-hero-content">
+        <span class="prodav-hero-label">Дом културе · Стари Колашин</span>
+        <h1 class="prodav-hero-title">Продавница</h1>
+        <p class="prodav-hero-sub">Публикације · Сувенири · Издања</p>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     PRODUCTS GRID
+═══════════════════════════════════════════ -->
+<section class="prodav-section">
+
+    <div class="prodav-section-header">
+        <span class="prodav-section-label">Каталог производа</span>
+        <h2 class="prodav-section-title">Наша издања</h2>
+        <div class="prodav-section-rule"></div>
+    </div>
+
+    {% if products %}
+    <div class="prodav-grid">
+        {% for product in products %}
+        <div class="prodav-card">
+
+            <div class="prodav-card-img">
+                <img src="{{ product.image.url }}" alt="{{ product.ime }}">
+                <div class="prodav-card-overlay">
+                    <p class="prodav-card-full-desc">{{ product.opis }}</p>
+                </div>
+            </div>
+
+            <div class="prodav-card-body">
+                <h3 class="prodav-card-title">{{ product.ime }}</h3>
+                <p class="prodav-card-desc">{{ product.opis|truncatewords:8 }}</p>
+                <div class="prodav-card-footer">
+                    <span class="prodav-card-price">{{ product.cena }},00 РСД</span>
+                    <button class="prodav-btn-buy prodav-open"
+                        data-id="{{ product.id }}"
+                        data-name="{{ product.ime }}"
+                        data-price="{{ product.cena }},00 РСД">
+                        Купи
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+    {% else %}
+    <p class="prodav-empty">Тренутно нема производа у продавници.</p>
+    {% endif %}
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     MODAL
+═══════════════════════════════════════════ -->
+<div class="prodav-backdrop" id="prodavBackdrop" aria-hidden="true">
+    <div class="prodav-modal" role="dialog" aria-modal="true">
+
+        <button class="prodav-modal-close" id="prodavClose" aria-label="Затвори">✕</button>
+
+        <div class="prodav-modal-header">
+            <span class="prodav-modal-label">Потврда куповине</span>
+            <h2 class="prodav-modal-title" id="prodavProductName">—</h2>
+            <p class="prodav-modal-price" id="prodavProductPrice"></p>
+        </div>
+
+        <form class="prodav-modal-form" id="prodavForm" method="POST" action="{% url 'prodavnica:contact_product' %}">
+            {% csrf_token %}
+            <input type="hidden" name="product_id" id="prodavProductId">
+
+            <div class="prodav-field">
+                <label for="prodavEmail">Ваша е-пошта <span class="prodav-req">*</span></label>
+                <input type="email" name="email" id="prodavEmail" placeholder="vasa@email.com" autocomplete="email" required>
+            </div>
+
+            <button type="submit" class="prodav-submit" id="prodavSubmit">
+                <span class="prodav-submit-text">Потврди куповину</span>
+                <span class="prodav-submit-spinner" aria-hidden="true"></span>
+            </button>
+        </form>
+
+    </div>
+</div>
+
+<button id="scrollTopBtn" class="scroll-top">↑</button>
+
+{% endblock %}
+
+
+{% block script %}
+<script>
+const backdrop  = document.getElementById('prodavBackdrop');
+const closeBtn  = document.getElementById('prodavClose');
+const form      = document.getElementById('prodavForm');
+const submitBtn = document.getElementById('prodavSubmit');
+
+function openModal(btn) {
+    document.getElementById('prodavProductName').textContent  = btn.dataset.name;
+    document.getElementById('prodavProductPrice').textContent = btn.dataset.price;
+    document.getElementById('prodavProductId').value          = btn.dataset.id;
+    backdrop.classList.add('prodav-active');
+    backdrop.setAttribute('aria-hidden', 'false');
+    document.getElementById('prodavEmail').focus();
+}
+
+function closeModal() {
+    backdrop.classList.remove('prodav-active');
+    backdrop.setAttribute('aria-hidden', 'true');
+}
+
+document.querySelectorAll('.prodav-open').forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn));
+});
+
+closeBtn.addEventListener('click', closeModal);
+backdrop.addEventListener('click', e => { if (e.target === backdrop) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+if (form) {
+    form.addEventListener('submit', () => {
+        submitBtn.disabled = true;
+        submitBtn.classList.add('prodav-loading');
+        submitBtn.querySelector('.prodav-submit-text').textContent = 'Слање...';
+    });
+}
+</script>
+{% endblock %}

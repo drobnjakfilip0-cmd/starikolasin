@@ -1,0 +1,107 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}{{ rec.naslov }} — {{ rec.autor }} | Часопис Стари Колашин{% endblock %}
+{% block meta_description %}{{ rec.paragraf1|truncatechars:155 }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_title %}{{ rec.naslov }} — {{ rec.autor }}{% endblock %}
+{% block og_description %}{{ rec.paragraf1|truncatechars:200 }}{% endblock %}
+{% block og_image %}{{ rec.slika.url }}{% endblock %}
+{% block og_image_alt %}{{ rec.naslov }} — {{ rec.autor }}{% endblock %}
+{% block twitter_title %}{{ rec.naslov }} — {{ rec.autor }}{% endblock %}
+{% block twitter_description %}{{ rec.paragraf1|truncatechars:200 }}{% endblock %}
+{% block twitter_image %}{{ rec.slika.url }}{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ rec.naslov }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ rec.autor }}"
+  },
+  "image": "{{ rec.slika.url }}",
+  "datePublished": "{{ rec.created|date:'c' }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Дом културе Стари Колашин",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ request.scheme }}://{{ request.get_host }}/media/images/logo.jpg"
+    }
+  },
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": "Часопис Стари Колашин"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ request.scheme }}://{{ request.get_host }}{{ request.path }}"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<section class="word-hero">
+
+    <div class="word-overlay"></div>
+
+    <img src="https://res.cloudinary.com/dt5z2gs3c/image/upload/v1780783446/duborg_trobe_httpss.mj.run32G08xoo1Bk_cool_culture_magazines__b45edd1c-b444-4a6d-82d6-fa19a062220f_1_lllohh.png" alt="Реч">
+
+    <div class="word-hero-content">
+        <span>ЧАСОПИС</span>
+        <h1>Стари Колашин</h1>
+    </div>
+
+</section>
+
+<section class="word-wrapper">
+
+    <!-- JEDAN TEKST -->
+
+    <article class="word-card">
+    
+        <div class="word-image">
+            <img src="{{rec.slika.url}}" alt="">
+        </div>
+
+        <div class="word-content">
+
+            <div class="word-meta">
+                <p class="author">{{rec.autor}}</p>
+                <span class="line"></span>
+            </div>
+
+            <h2>
+                {{rec.naslov}}
+            </h2>
+
+            <div class="word-text">
+
+                <p>
+                    {{rec.paragraf1}}  </p>
+
+                <p>
+                   {{rec.paragraf2}}   </p>
+
+                <blockquote>
+                    {{rec.citat}}
+                </blockquote>
+
+                <p>
+                    {{rec.paragraf3}}       </p>
+
+            </div>
+
+        </div>
+
+    </article>
+ 
+
+</section>
+
+{% endblock %}
