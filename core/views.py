@@ -1,7 +1,15 @@
 from django.shortcuts import render, get_object_or_404
+from django.template.response import TemplateResponse
 from .models import Vest, Video, Rec, Artwork, Film
 from django.db.models import Q
 from django.contrib.postgres.search import TrigramSimilarity
+
+
+def service_worker(request):
+    response = TemplateResponse(request, 'sw.js', content_type='application/javascript')
+    response['Service-Worker-Allowed'] = '/'
+    response['Cache-Control'] = 'no-cache'
+    return response
 
 
 # Create your views here.

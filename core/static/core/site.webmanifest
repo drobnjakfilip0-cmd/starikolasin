@@ -1,18 +1,73 @@
 {
   "name": "Дом културе Стари Колашин",
   "short_name": "Стари Колашин",
-  "description": "Дом културе у Зубином Потоку — биоскоп, часопис, ликовна колонија и КУД Мокра Гора.",
+  "description": "Центар културног живота Ибарског Колашина — биоскоп, вести, часопис и ликовна колонија.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#1a1a1a",
+  "background_color": "transparent",
+  "lang": "sr",
+  "dir": "ltr",
+  "categories": ["entertainment", "education"],
   "icons": [
     {
-      "src": "/media/images/logo.jpg",
-      "sizes": "any",
+      "src": "/static/core/icons/icon.jpg",
+      "sizes": "192x192",
       "type": "image/jpeg",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/static/core/icons/icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/static/core/icons/icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
     }
   ],
-  "theme_color": "#1a1a1a",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "start_url": "/",
-  "lang": "sr"
+  "screenshots": [
+    {
+      "src": "https://res.cloudinary.com/dt5z2gs3c/image/upload/v1780849064/domski_kjt0er.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Дом културе Стари Колашин — насловна страна"
+    },
+    {
+      "src": "https://res.cloudinary.com/dt5z2gs3c/image/upload/v1780849064/domski_kjt0er.jpg",
+      "sizes": "640x1136",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Дом културе Стари Колашин"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Биоскоп",
+      "short_name": "Биоскоп",
+      "description": "Биоскопски програм и резервација карата",
+      "url": "/bioskop/",
+      "icons": [{ "src": "/static/core/icons/icon.jpg", "sizes": "96x96", "type": "image/jpeg" }]
+    },
+    {
+      "name": "Вести",
+      "short_name": "Вести",
+      "description": "Најновије вести",
+      "url": "/#vesti",
+      "icons": [{ "src": "/static/core/icons/icon.jpg", "sizes": "96x96", "type": "image/jpeg" }]
+    },
+    {
+      "name": "Часопис",
+      "short_name": "Часопис",
+      "description": "Часопис Стари Колашин",
+      "url": "/rec/",
+      "icons": [{ "src": "/static/core/icons/icon.jpg", "sizes": "96x96", "type": "image/jpeg" }]
+    }
+  ]
 }

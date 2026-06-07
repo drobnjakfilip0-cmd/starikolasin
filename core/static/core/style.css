@@ -2923,7 +2923,7 @@ font-style: normal;
         gap: 1px;
     }
     .logo-top {
-        font-size: 0.58rem;
+        font-size: 0.98rem;
         letter-spacing: 3px;
          font-family: 'Alumni Sans SC', sans-serif;
     }
@@ -2931,7 +2931,7 @@ font-style: normal;
         display: none;
     }
     .logo-bottom {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         letter-spacing: 0.3px;
          font-family: 'Alumni Sans SC', sans-serif;
     }
@@ -3258,12 +3258,12 @@ font-style: normal;
         margin-right: 9px;
     }
     .logo-top {
-        font-size: 0.52rem;
+        font-size: 0.92rem;
         letter-spacing: 2.5px;
          font-family: 'Alumni Sans SC', sans-serif;
     }
     .logo-bottom {
-        font-size: 0.95rem;
+        font-size: 1.25rem;
         letter-spacing: 0.2px;
          font-family: 'Alumni Sans SC', sans-serif;
     }
