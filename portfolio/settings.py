@@ -165,15 +165,13 @@ LOGGING = {
 
 # ── PRODUCTION SECURITY (active when DEBUG=False) ──────────────────────────────
 if not DEBUG:
-    # Tell Django to trust the X-Forwarded-Proto header from the proxy
-    # (Railway / Render / Heroku all terminate SSL at their proxy)
+    # Hostinger terminates SSL at their server level — let them handle redirects.
+    # Django should NOT redirect HTTP→HTTPS itself; doing so kills POST data.
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    SECURE_HSTS_SECONDS = 31536000
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-    SECURE_HSTS_PRELOAD = True
+    SECURE_SSL_REDIRECT = False          # ← Hostinger/Nginx handles this
+    SESSION_COOKIE_SECURE = False        # ← must be False when proxy forwards as HTTP
+    CSRF_COOKIE_SECURE = False           # ← must be False when proxy forwards as HTTP
+    SECURE_HSTS_SECONDS = 0              # ← disable HSTS until SSL is confirmed working
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
-    X_FRAME_OPTIONS = 'SAMEORIGIN'  # DENY breaks CKEditor & some admin widgets
+    X_FRAME_OPTIONS = 'SAMEORIGIN'
