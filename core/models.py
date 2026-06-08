@@ -4,7 +4,7 @@ from ckeditor.fields import RichTextField
 class Vest(models.Model):
 
     naslov = models.CharField(max_length=100)
-    opis = models.CharField(max_length=255)
+    opis = models.TextField()
 
     image = models.ImageField(upload_to='images/')
 
