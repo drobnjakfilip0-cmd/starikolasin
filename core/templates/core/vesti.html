@@ -41,16 +41,15 @@
 
 <section class="cnt-vesti">
 
-    <img src="{{ vest.image.url }}" alt="{{ vest.naslov }}">
+    <div class="vest-hero">
+        <img src="{{ vest.image.url }}" alt="{{ vest.naslov }}">
+    </div>
 
-    <div class="content">
-
-        <h2>{{ vest.naslov }}</h2>
-
-        <p>
-            {{ vest.opis }}
-        </p>
-
+    <div class="vest-body">
+        <span class="vest-date">{{ vest.created_at|date:"d. F Y." }}</span>
+        <h1 class="vest-title">{{ vest.naslov }}</h1>
+        <div class="vest-rule"></div>
+        <p>{{ vest.opis }}</p>
     </div>
 
 </section>
