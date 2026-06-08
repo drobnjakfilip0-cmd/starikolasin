@@ -97,7 +97,7 @@ class Artwork(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             from django.utils.text import slugify
-            base = slugify(f"{self.author_name}-{self.title}")
+            base = slugify(f"{self.author_name}-{self.title}", allow_unicode=True)
             slug = base
             n = 1
             while Artwork.objects.filter(slug=slug).exclude(pk=self.pk).exists():
