@@ -6,7 +6,6 @@ Django==6.0.5
 django-ckeditor==6.7.3
 django-cloudinary-storage==0.3.0
 django-js-asset==3.1.2
-dotenv==0.9.9
 gunicorn==26.0.0
 idna==3.14
 packaging==26.2
