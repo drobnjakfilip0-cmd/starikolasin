@@ -4,7 +4,7 @@ const CACHE_NAME = 'domkulture-v1';
 const SHELL = [
   '/',
   '/about/',
-  '/rec/',
+  '/casopis/',
   '/bioskop/',
   '/likovna-kolonija/',
   '/static/core/style.css',
