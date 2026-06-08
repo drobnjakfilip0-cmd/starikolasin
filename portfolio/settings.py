@@ -165,6 +165,9 @@ LOGGING = {
 
 # ── PRODUCTION SECURITY (active when DEBUG=False) ──────────────────────────────
 if not DEBUG:
+    # Tell Django to trust the X-Forwarded-Proto header from the proxy
+    # (Railway / Render / Heroku all terminate SSL at their proxy)
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
@@ -173,4 +176,4 @@ if not DEBUG:
     SECURE_HSTS_PRELOAD = True
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
-    X_FRAME_OPTIONS = 'DENY'
+    X_FRAME_OPTIONS = 'SAMEORIGIN'  # DENY breaks CKEditor & some admin widgets
